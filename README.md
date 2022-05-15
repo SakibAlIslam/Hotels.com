@@ -1,6 +1,6 @@
-# Hotel.com
+# Hotels.com (Front End)
 
-## MERN Stack Project
+## MERN Stack Project (under development)
 
 In the project directory, you can run:
 
