@@ -30,7 +30,9 @@
     font-weight: 500;
 }
 .headerDescription{
+    font-size: 18px;
     margin: 20px 0px;
+    color:gainsboro
 }
 .headerBtn{
     border:none;
