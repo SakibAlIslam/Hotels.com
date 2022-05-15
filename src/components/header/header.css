@@ -12,5 +12,27 @@
 .headerList{
     display: flex;
     gap: 40px;
-    
+}
+.headerListItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.headerListItem.active{
+    border: 1px solid var(--white-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+.headerBtn{
+    border:none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.headerBtn:hover{
+    background-color: #f3a84c;
 }
