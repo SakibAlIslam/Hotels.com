@@ -12,8 +12,8 @@ code {
     monospace;
 }
 :root {
-  --primary-color: #f08b13 !important;
-  --secondary-color: rgba(244, 179, 0, 1) !important;
+  --primary-color: #003580 !important;
+  --secondary-color: #f08b13 !important;
   --error-color: rgba(219, 69, 55, 1) !important;
   --success-color: rgba(15, 157, 88, 1) !important;
   --white-color: rgba(255, 255, 255, 1) !important;
