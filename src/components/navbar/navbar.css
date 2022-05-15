@@ -1,4 +1,5 @@
 .navbar{
+    padding-top: 10px;
     height: 50px;
     background-color:var(--primary-color);
     display: flex;
@@ -13,8 +14,8 @@
     justify-content:space-between;
 }
 .logo{
-    font-weight: 700;
-    font-size: 18px;
+    font-size: 32px;
+    font-family: 'Dancing Script', cursive;
 }
 .navButton{
     margin-left: 20px;

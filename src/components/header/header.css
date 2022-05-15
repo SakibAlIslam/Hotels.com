@@ -17,11 +17,20 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 10px;
 }
 .headerListItem.active{
     border: 1px solid var(--white-color);
     padding: 10px;
     border-radius: 10px;
+}
+.headerTitle{
+    font-family: 'Koulen', cursive;
+    letter-spacing: 8px;
+    font-weight: 500;
+}
+.headerDescription{
+    margin: 20px 0px;
 }
 .headerBtn{
     border:none;
