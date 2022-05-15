@@ -26,3 +26,6 @@
     border-radius: 4px;
     font-weight: 700;
 }
+.navButton:hover{
+    background-color: #f3a84c;
+}
