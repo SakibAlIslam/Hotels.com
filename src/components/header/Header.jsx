@@ -15,6 +15,7 @@ const Header = () => {
             key: 'selection'
         }
     ]);
+    const [openDate, setOpenDate] = useState(false)
     return (
         <div className="header">
             <div className="headerContainer">
@@ -52,16 +53,25 @@ const Header = () => {
                         <FontAwesomeIcon icon={faCarCrash} className="headerIcon" />
                         <input type="text" name="" className="headerSearchInput" id="" placeholder="Where are you going?" />
                     </div>
-                    <div className="headerSearchItem">
-                        <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-                        <span className="headerSearchText">{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
-                        <DateRange
+                    <div
+                        className="headerSearchItem"
+                    >
+                        <FontAwesomeIcon
+                            icon={faCalendarDays}
+                            className="headerIcon"
+                            onClick={() => setOpenDate(!openDate)} />
+                        <span
+                            onClick={() => setOpenDate(!openDate)} className="headerSearchText"
+                        >
+                            {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate, "MM/dd/yyyy")}`}
+                        </span>
+                        {openDate && <DateRange
                             editableDateInputs={true}
                             onChange={item => setDate([item.selection])}
                             moveRangeOnFirstSelection={false}
                             ranges={date}
                             className="date"
-                        />
+                        />}
                     </div>
                     <div className="headerSearchItem">
                         <FontAwesomeIcon icon={faPerson} className="headerIcon" />
