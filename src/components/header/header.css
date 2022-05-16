@@ -3,6 +3,7 @@
     color: var(--white-color);
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .headerContainer{
     width: 100%;
@@ -16,34 +17,56 @@
 .headerListItem{
     display: flex;
     align-items: center;
+    padding: 10px;
     gap: 10px;
     margin-bottom: 10px;
+}
+.headerListItem:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #1A4A8D
 }
 .headerListItem.active{
     border: 1px solid var(--white-color);
     padding: 10px;
     border-radius: 10px;
+    background-color: #1A4A8D
 }
 .headerTitle{
-    font-family: 'Koulen', cursive;
-    letter-spacing: 8px;
-    font-weight: 500;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+    margin: 48px 0px 20px 0px;
 }
 .headerDescription{
     font-size: 18px;
-    margin: 20px 0px;
+    margin: 10px 0px;
     color:gainsboro
 }
 .headerBtn{
     border:none;
-    padding: 10px 20px;
+    padding: 16px 24px;
     cursor: pointer;
     color: var(--white-color);
-    background-color: var(--secondary-color);
+    background-color: var(--btn-primary-color);
     border-radius: 4px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
 }
 .headerBtn:hover{
-    background-color: #f3a84c;
+    background-color: #00487A;
+}
+.headerSearch{
+    height: 30px;
+    background-color: #fff;
+    border: 3px solid var(--secondary-color);
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: -25px;
+}
+.headerIcon{
+    color:lightgray;
 }

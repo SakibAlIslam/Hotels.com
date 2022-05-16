@@ -14,6 +14,7 @@ code {
 :root {
   --primary-color: #003580 !important;
   --secondary-color: #f08b13 !important;
+  --btn-primary-color: #0071C2 !important;
   --error-color: rgba(219, 69, 55, 1) !important;
   --success-color: rgba(15, 157, 88, 1) !important;
   --white-color: rgba(255, 255, 255, 1) !important;
