@@ -86,3 +86,11 @@
     font-size: 14px;
     letter-spacing: 1px;
 }
+.headerSearchText{
+   color:lightgray;
+   cursor:pointer; 
+}
+.date{
+    position:absolute;
+    top:50px;
+}
