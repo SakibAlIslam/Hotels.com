@@ -16,6 +16,13 @@ const Header = () => {
         }
     ]);
     const [openDate, setOpenDate] = useState(false)
+    const [options, setOptions] = useState({
+        adult: 1,
+        children: 0,
+        room: 1,
+    })
+    const [openOptions, setOpenOptions] = useState(false)
+
     return (
         <div className="header">
             <div className="headerContainer">
@@ -75,7 +82,16 @@ const Header = () => {
                     </div>
                     <div className="headerSearchItem">
                         <FontAwesomeIcon icon={faPerson} className="headerIcon" />
-                        <span className="headerSearchText">2 adults 2 children 1 room</span>
+                        <span className="headerSearchText">
+                            {`${options.adult} adult · ${options.children} children · ${options.room} room`}
+                        </span>
+                        <div className="options">
+                            <div className="optionItem">
+                                <span className="optionText">
+
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div className="headerSearchItem">
                         <button className="headerBtn">Search</button>
