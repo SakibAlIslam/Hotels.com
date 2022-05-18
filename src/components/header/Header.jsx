@@ -21,7 +21,14 @@ const Header = () => {
         children: 0,
         room: 1,
     })
-    const [openOptions, setOpenOptions] = useState(false)
+    const [openOptions, setOpenOptions] = useState(false);
+
+    const handleCounting = (name, operation) => {
+        setOptions((prev) => ({
+            ...prev,
+            [name] : operation === 'i' ?  options[name] + 1 : options[name] - 1,
+        }))
+    }
 
     return (
         <div className="header">
@@ -68,7 +75,7 @@ const Header = () => {
                             className="headerIcon"
                             onClick={() => setOpenDate(!openDate)} />
                         <span
-                            onClick={() => setOpenDate(!openDate)} className="headerSearchText"
+                            onClick={() => {setOpenDate(!openDate); setOpenOptions(false); }} className="headerSearchText"
                         >
                             {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate, "MM/dd/yyyy")}`}
                         </span>
@@ -82,16 +89,56 @@ const Header = () => {
                     </div>
                     <div className="headerSearchItem">
                         <FontAwesomeIcon icon={faPerson} className="headerIcon" />
-                        <span className="headerSearchText">
+                        <span className="headerSearchText" onClick={() => {
+                            setOpenOptions(!openOptions);
+                            setOpenDate(false)
+                        }}>
                             {`${options.adult} adult · ${options.children} children · ${options.room} room`}
                         </span>
-                        <div className="options">
+                        {openOptions && <div className="options">
                             <div className="optionItem">
                                 <span className="optionText">
-
+                                    Adult
                                 </span>
+                                <div className="optionCounter">
+                                    <button className="optionCounterButton" onClick={()=> {
+                                        if(options?.adult > 0){
+                                            handleCounting("adult", "d")
+                                        }
+                                    }}>-</button>
+                                    <span className="optionCounterNumber">{options?.adult}</span>
+                                    <button className="optionCounterButton" onClick={()=> {handleCounting("adult", "i")}}>+</button>
+                                </div>
                             </div>
-                        </div>
+                            <div className="optionItem">
+                                <span className="optionText">
+                                    Children
+                                </span>
+                                <div className="optionCounter">
+                                    <button className="optionCounterButton" onClick={()=> {
+                                        if(options?.children > 0){
+                                            handleCounting("children", "d")
+                                        }
+                                    }}>-</button>
+                                    <span className="optionCounterNumber">{options?.children}</span>
+                                    <button className="optionCounterButton" onClick={()=> {handleCounting("children", "i")}}>+</button>
+                                </div>
+                            </div>
+                            <div className="optionItem">
+                                <span className="optionText">
+                                    Room
+                                </span>
+                                <div className="optionCounter">
+                                    <button className="optionCounterButton" onClick={()=> {
+                                        if(options?.room > 0){
+                                            handleCounting("room", "d")
+                                        }
+                                    }}>-</button>
+                                    <span className="optionCounterNumber">{options?.room}</span>
+                                    <button className="optionCounterButton" onClick={()=> {handleCounting("room", "i")}}>+</button>
+                                </div>
+                            </div>
+                        </div>}
                     </div>
                     <div className="headerSearchItem">
                         <button className="headerBtn">Search</button>
