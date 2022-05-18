@@ -102,10 +102,8 @@ const Header = () => {
                                 </span>
                                 <div className="optionCounter">
                                     <button className="optionCounterButton" onClick={()=> {
-                                        if(options?.adult > 1){
-                                            handleCounting("adult", "d")
-                                        }
-                                    }}>-</button>
+                                        handleCounting("adult", "d")
+                                    }} disabled={options?.adult === 1}>-</button>
                                     <span className="optionCounterNumber">{options?.adult}</span>
                                     <button className="optionCounterButton" onClick={()=> {handleCounting("adult", "i")}}>+</button>
                                 </div>
@@ -116,10 +114,8 @@ const Header = () => {
                                 </span>
                                 <div className="optionCounter">
                                     <button className="optionCounterButton" onClick={()=> {
-                                        if(options?.children > 0){
-                                            handleCounting("children", "d")
-                                        }
-                                    }}>-</button>
+                                        handleCounting("children", "d")
+                                    }} disabled={options?.children === 0}>-</button>
                                     <span className="optionCounterNumber">{options?.children}</span>
                                     <button className="optionCounterButton" onClick={()=> {handleCounting("children", "i")}}>+</button>
                                 </div>
@@ -130,10 +126,8 @@ const Header = () => {
                                 </span>
                                 <div className="optionCounter">
                                     <button className="optionCounterButton" onClick={()=> {
-                                        if(options?.room > 1){
-                                            handleCounting("room", "d")
-                                        }
-                                    }}>-</button>
+                                        handleCounting("room", "d")
+                                    }} disabled={options?.room === 1}>-</button>
                                     <span className="optionCounterNumber">{options?.room}</span>
                                     <button className="optionCounterButton" onClick={()=> {handleCounting("room", "i")}}>+</button>
                                 </div>

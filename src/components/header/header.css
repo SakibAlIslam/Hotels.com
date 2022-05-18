@@ -127,3 +127,7 @@
     border-radius: 3px;
     cursor: pointer;
 }
+.optionCounterButton:disabled {
+    background-color: gray;
+    cursor: not-allowed
+}
