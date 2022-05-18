@@ -102,7 +102,7 @@ const Header = () => {
                                 </span>
                                 <div className="optionCounter">
                                     <button className="optionCounterButton" onClick={()=> {
-                                        if(options?.adult > 0){
+                                        if(options?.adult > 1){
                                             handleCounting("adult", "d")
                                         }
                                     }}>-</button>
@@ -130,7 +130,7 @@ const Header = () => {
                                 </span>
                                 <div className="optionCounter">
                                     <button className="optionCounterButton" onClick={()=> {
-                                        if(options?.room > 0){
+                                        if(options?.room > 1){
                                             handleCounting("room", "d")
                                         }
                                     }}>-</button>
